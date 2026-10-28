@@ -1,0 +1,18 @@
+2026-10-24 14:07:47  run folder C:\Users\Martin\ImSwitchConfig\imnotebook\BIOPHOTON\data\E2_touptek_ptc\2026-10-24_14-07-47_touptek_ptc
+2026-10-24 14:08:05  camera read back: {'exposure_mode': 'manual', 'pixel_format': 'mono16', 'conversion_gain': 'HCG', 'low_noise': True, 'gain': 23.0, 'blacklevel': 1000, 'target_temperature': -30.0}
+2026-10-24 14:08:09  sensor at -23.5 °C
+2026-10-24 14:08:18  operator: MOUNT the beta light directly in front of the sensor
+2026-10-24 14:08:29  exposure check at 1000 ms: /recordings/2026-10-24/2026-10-24T14-08-27-018927_2026-10-24_14-07-47_touptek_ptc_check_1000ms_WidefieldCamera.ome.tiff
+2026-10-24 14:08:58  gain 23: session 20261024_140858_touptek_ptc_gain23
+2026-10-24 14:08:58  gain 23: bright stack
+2026-10-24 14:09:09  operator: REMOVE the beta light and cap the camera
+2026-10-24 14:09:09  gain 23: dark stack
+2026-10-24 14:09:43  gain 23: 0.0003188 e-/ADU, read noise 0.161 e-, offset 4600.2 ADU
+2026-10-24 14:10:21  step 0 'dark_0.2s': 0.2 s frames, 2 of them
+2026-10-24 14:10:28  saved dark_0.2s_0000 (0.2 s, median 929.0)
+2026-10-24 14:10:35  saved dark_0.2s_0001 (0.2 s, median 929.0)
+2026-10-24 14:10:39  step 1 'dark_1s': 1 s frames, 2 of them
+2026-10-24 14:10:46  saved dark_1s_0002 (1 s, median 1040.0)
+2026-10-24 14:10:53  saved dark_1s_0003 (1 s, median 1040.0)
+2026-10-24 14:10:53  acquisition done: 4 frames
+2026-10-24 14:12:07  run finished

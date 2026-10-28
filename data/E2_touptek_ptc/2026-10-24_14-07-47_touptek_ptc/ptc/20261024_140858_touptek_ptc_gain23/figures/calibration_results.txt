@@ -1,0 +1,22 @@
+# Results from calibration tool for inhomogenous image stacks.
+# See definitions.txt for extended definitions.
+# The results are in the YAML format, readable by humans and machines
+# Written by David McFadden, FSU Jena
+# NanoImagingPack library: https://github.com/bionanoimaging/NanoImagingPack
+# Questions, bugs and requests to: david.mcfadden777@gmail.com
+# heintzmann@gmail.com
+        
+Dark images: '3'
+Bright images: '3'
+Illumination fluctuation: 41.59%
+Hot or Cold pixels excluded: 3135565 (34.9%)
+Bright image dynamic range [factor]: '-2.58'
+Noisy pixels excluded: 2%
+Noise exclusion threshold [e-]: '0.4'
+Background [ADU]: '4600.20'
+Gain [e- / ADU]: '0.0003'
+Readnoise, RMS [e-]: '0.16'
+Readnoise, median  [e-]: '0.14'
+Linearity Error: 6.7%
+Fixed pattern offset std. [e-]: '2444.80'
+Total electrons per exposure [e-]: '5.982E+04'

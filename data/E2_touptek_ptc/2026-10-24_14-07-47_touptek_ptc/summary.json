@@ -1,0 +1,41 @@
+{
+  "ptc": [
+    {
+      "gain_ui": 23,
+      "exposure_ms": 1000,
+      "e_per_adu": 0.00031884294997838524,
+      "read_noise_e": 0.16136933695125408,
+      "offset_adu": 4600.196675430779,
+      "e_per_adu_temporal": 0.018349869781876808,
+      "read_noise_e_temporal": 8.025951398894062
+    }
+  ],
+  "warnings": [],
+  "dark_ladder_exposures_s": [
+    0.2,
+    1.0
+  ],
+  "dark_slope_adu_per_s": 138.75000000000014,
+  "dark_variance_slope_adu2_per_s": 13802.711518574999,
+  "e_per_adu_used": 0.018349869781876808,
+  "dark_current_e_px_s_from_mean": 2.54604443223541,
+  "dark_current_e_px_s_from_variance": 4.647617566318386,
+  "ratio_to_datasheet_mean": 5092.09,
+  "ratio_to_datasheet_variance": 9295.24,
+  "camera_temperature_c_min_max": [
+    -27.7,
+    -23.5
+  ],
+  "enclosure_temperature_c_min_max": [
+    21.171,
+    21.205
+  ],
+  "humidity_pct_min_max": [
+    42.884,
+    42.978
+  ],
+  "lux_min_max": [
+    0.508,
+    0.508
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "sessionId": "20261024_140858_touptek_ptc_gain23",
+  "name": "touptek_ptc_gain23",
+  "detector": "WidefieldCamera",
+  "nBright": 3,
+  "nDark": 3,
+  "numBins": 100,
+  "exposure": 1000.0,
+  "gain": 0.00031884294997838524,
+  "created": "2026-10-24T14:08:58",
+  "status": "computed",
+  "brightCount": 3,
+  "darkCount": 3,
+  "readnoise": 0.16136933695125408,
+  "offset": 4600.196675430779
+}

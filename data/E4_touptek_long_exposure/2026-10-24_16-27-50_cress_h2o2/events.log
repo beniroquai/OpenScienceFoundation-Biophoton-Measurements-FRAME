@@ -1,0 +1,30 @@
+2026-10-24 16:27:50  run folder C:\Users\Martin\ImSwitchConfig\imnotebook\BIOPHOTON\data\E4_touptek_long_exposure\2026-10-24_16-27-50_cress_h2o2
+2026-10-24 16:28:07  camera read back: {'exposure_mode': 'manual', 'pixel_format': 'mono16', 'conversion_gain': 'HCG', 'low_noise': True, 'gain': 23.0, 'blacklevel': 1000, 'target_temperature': -30.0}
+2026-10-24 16:28:11  sensor at -24.1 °C
+2026-10-24 16:28:16  step 0 'frame': 1800 s frames, for 43200 s
+2026-10-24 16:58:25  saved frame_0000 (1800 s, median 1270.0)
+2026-10-24 17:28:35  saved frame_0001 (1800 s, median 1253.0)
+2026-10-24 17:58:45  saved frame_0002 (1800 s, median 1251.0)
+2026-10-24 18:28:54  saved frame_0003 (1800 s, median 1250.0)
+2026-10-24 18:59:04  saved frame_0004 (1800 s, median 1249.0)
+2026-10-24 19:29:13  saved frame_0005 (1800 s, median 1249.0)
+2026-10-24 19:59:23  saved frame_0006 (1800 s, median 1248.0)
+2026-10-24 20:29:33  saved frame_0007 (1800 s, median 1247.0)
+2026-10-24 20:59:42  saved frame_0008 (1800 s, median 1247.0)
+2026-10-24 21:29:52  saved frame_0009 (1800 s, median 1246.0)
+2026-10-24 22:00:01  saved frame_0010 (1800 s, median 1246.0)
+2026-10-24 22:30:11  saved frame_0011 (1800 s, median 1246.0)
+2026-10-24 23:00:21  saved frame_0012 (1800 s, median 1246.0)
+2026-10-24 23:30:30  saved frame_0013 (1800 s, median 1246.0)
+2026-10-25 00:00:39  saved frame_0014 (1800 s, median 1246.0)
+2026-10-25 00:30:49  saved frame_0015 (1800 s, median 1245.0)
+2026-10-25 01:00:59  saved frame_0016 (1800 s, median 1244.0)
+2026-10-25 01:31:08  saved frame_0017 (1800 s, median 1244.0)
+2026-10-25 02:01:18  saved frame_0018 (1800 s, median 1244.0)
+2026-10-25 02:31:28  saved frame_0019 (1800 s, median 1243.0)
+2026-10-25 02:01:37  saved frame_0020 (1800 s, median 1243.0)
+2026-10-25 02:31:47  saved frame_0021 (1800 s, median 1242.0)
+2026-10-25 03:01:57  saved frame_0022 (1800 s, median 1242.0)
+2026-10-25 03:32:06  saved frame_0023 (1800 s, median 1242.0)
+2026-10-25 03:32:06  acquisition done: 24 frames
+2026-10-25 03:32:23  run finished

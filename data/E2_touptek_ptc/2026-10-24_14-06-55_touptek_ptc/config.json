@@ -1,0 +1,40 @@
+{
+  "kind": "ptc",
+  "experiment": "E2",
+  "title": "E2 - ToupTek photon-transfer calibration",
+  "description": "Photon-transfer calibration of the ToupTek MTR3CMOS09000KMA at the operating point of E4 (gain 23, HCG, black level 1000, -30 \u00b0C), with the beta light mounted directly in front of the sensor, followed by a dark ladder. Gives the conversion gain (e-/ADU), read noise and offset, and the dark current in e-/px/s, to settle the factor ~10 between the datasheet and what was measured so far.",
+  "server": "http://localhost:8001/imswitch/api",
+  "detector": "WidefieldCamera",
+  "dry_run": true,
+  "camera_settings": {
+    "exposure_mode": "manual",
+    "pixel_format": "mono16",
+    "conversion_gain": "HCG",
+    "low_noise": true,
+    "gain": 23,
+    "blacklevel": 1000,
+    "target_temperature": -30
+  },
+  "camera_readback": {
+    "exposure_mode": "manual",
+    "pixel_format": "mono16",
+    "conversion_gain": "HCG",
+    "low_noise": true,
+    "gain": 23.0,
+    "blacklevel": 1000,
+    "target_temperature": -30.0
+  },
+  "gains": [
+    23
+  ],
+  "n_bright": 3,
+  "n_dark": 3,
+  "dark_ladder_s": [
+    0.2,
+    1
+  ],
+  "dark_ladder_frames": 2,
+  "dark_ladder_gain": 23,
+  "datasheet_dark_e_px_s": 0.0005,
+  "ptc_sessions": []
+}

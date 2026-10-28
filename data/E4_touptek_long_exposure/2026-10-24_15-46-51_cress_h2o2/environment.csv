@@ -1,0 +1,3 @@
+iso_time,unix_time,source,camera_temperature_c,camera_target_c,enclosure_temperature_c,humidity_pct,lux,note
+2026-10-24T15:47:10,1792849630.8392227,toupcam,-25.0,-30.0,20.562,51.773,,
+2026-10-24T15:47:45,1792849665.955849,toupcam,-25.2,-30.0,20.434,51.927,,

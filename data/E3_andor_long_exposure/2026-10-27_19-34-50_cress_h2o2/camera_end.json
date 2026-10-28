@@ -1,0 +1,389 @@
+{
+  "model": "DU888_BV",
+  "isMock": false,
+  "isConnected": true,
+  "isRGB": false,
+  "sensorWidth": 256,
+  "sensorHeight": 256,
+  "currentWidth": 256,
+  "currentHeight": 256,
+  "pixelSizeUm": [
+    1,
+    13.0,
+    13.0
+  ],
+  "binning": 4,
+  "supportedBinnings": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "frameStart": [
+    0,
+    0
+  ],
+  "croppable": true,
+  "forAcquisition": true,
+  "forFocusLock": false,
+  "cameraType": "AndorServer",
+  "parameterRanges": {
+    "exposure": {
+      "min": 0,
+      "max": 86400000,
+      "units": "ms"
+    },
+    "gain": {
+      "min": 2,
+      "max": 300,
+      "units": "EM gain"
+    },
+    "target_temperature": {
+      "min": -120,
+      "max": -20,
+      "units": "\u00b0C"
+    }
+  },
+  "isLongExposure": true,
+  "isAcquiring": false,
+  "isAdjustingParameters": false,
+  "server": {
+    "state": "idle",
+    "error": null,
+    "exposure": null,
+    "live": {
+      "requested": false,
+      "fps": 0.0,
+      "dropped": 0
+    },
+    "temperature": {
+      "celsius": -80.05,
+      "status": "stabilized",
+      "cooler_on": true,
+      "setpoint_c": -80,
+      "fan_mode": "full",
+      "keep_cooling_on_exit": true,
+      "updated_at": 1793169399.1504483
+    }
+  },
+  "serverUrl": "http://andor-server:8000",
+  "currentTriggerSource": "Continous",
+  "availableTriggerTypes": [
+    "Continous",
+    "Internal trigger",
+    "External trigger"
+  ],
+  "detectorName": "Andor",
+  "groups": [
+    {
+      "name": "Misc",
+      "parameters": [
+        {
+          "name": "exposure",
+          "value": 1800000.0,
+          "group": "Misc",
+          "editable": true,
+          "type": "number",
+          "units": "ms",
+          "min": 0,
+          "max": 86400000
+        },
+        {
+          "name": "gain",
+          "value": 300,
+          "group": "Misc",
+          "editable": true,
+          "type": "number",
+          "units": "EM gain",
+          "min": 2,
+          "max": 300
+        },
+        {
+          "name": "image_width",
+          "value": 256,
+          "group": "Misc",
+          "editable": false,
+          "type": "number",
+          "units": "px",
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "image_height",
+          "value": 256,
+          "group": "Misc",
+          "editable": false,
+          "type": "number",
+          "units": "px",
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "frame_rate",
+          "value": 5.0,
+          "group": "Misc",
+          "editable": true,
+          "type": "number",
+          "units": "fps",
+          "min": 0.1,
+          "max": 30
+        },
+        {
+          "name": "frame_number",
+          "value": 27784,
+          "group": "Misc",
+          "editable": false,
+          "type": "number",
+          "units": "frames",
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "previewMinValue",
+          "value": 0,
+          "group": "Misc",
+          "editable": true,
+          "type": "number",
+          "units": "arb.u.",
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "previewMaxValue",
+          "value": 65535,
+          "group": "Misc",
+          "editable": true,
+          "type": "number",
+          "units": "arb.u.",
+          "min": null,
+          "max": null
+        }
+      ]
+    },
+    {
+      "name": "Acquisition mode",
+      "parameters": [
+        {
+          "name": "trigger_source",
+          "value": "Continous",
+          "group": "Acquisition mode",
+          "editable": true,
+          "type": "list",
+          "options": [
+            "Continous",
+            "Internal trigger",
+            "External trigger"
+          ]
+        },
+        {
+          "name": "shutter_mode",
+          "value": "auto",
+          "group": "Acquisition mode",
+          "editable": true,
+          "type": "list",
+          "options": [
+            "auto",
+            "open",
+            "closed"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Miscellaneous",
+      "parameters": [
+        {
+          "name": "Camera pixel size",
+          "value": 13.0,
+          "group": "Miscellaneous",
+          "editable": true,
+          "type": "number",
+          "units": "\u00b5m",
+          "min": null,
+          "max": null
+        }
+      ]
+    },
+    {
+      "name": "Image format",
+      "parameters": [
+        {
+          "name": "pixel_format",
+          "value": "mono16",
+          "group": "Image format",
+          "editable": false,
+          "type": "list",
+          "options": [
+            "mono16"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Readout",
+      "parameters": [
+        {
+          "name": "output_amplifier",
+          "value": "Electron Multiplying",
+          "group": "Readout",
+          "editable": true,
+          "type": "list",
+          "options": [
+            "Electron Multiplying",
+            "Conventional"
+          ]
+        },
+        {
+          "name": "readout_rate",
+          "value": "1 MHz",
+          "group": "Readout",
+          "editable": true,
+          "type": "list",
+          "options": [
+            "30 MHz",
+            "20 MHz",
+            "10 MHz",
+            "1 MHz"
+          ]
+        },
+        {
+          "name": "preamp_gain",
+          "value": "2x",
+          "group": "Readout",
+          "editable": true,
+          "type": "list",
+          "options": [
+            "1x",
+            "2x"
+          ]
+        },
+        {
+          "name": "vs_speed",
+          "value": "4.33 us",
+          "group": "Readout",
+          "editable": true,
+          "type": "list",
+          "options": [
+            "0.6 us",
+            "1.13 us",
+            "2.2 us",
+            "4.33 us"
+          ]
+        },
+        {
+          "name": "vs_amplitude",
+          "value": "Normal",
+          "group": "Readout",
+          "editable": true,
+          "type": "list",
+          "options": [
+            "Normal",
+            "+1",
+            "+2",
+            "+3",
+            "+4"
+          ]
+        },
+        {
+          "name": "em_gain_mode",
+          "value": "real",
+          "group": "Readout",
+          "editable": true,
+          "type": "list",
+          "options": [
+            "dac255",
+            "dac4095",
+            "linear",
+            "real"
+          ]
+        },
+        {
+          "name": "em_advanced",
+          "value": false,
+          "group": "Readout",
+          "editable": true,
+          "type": "boolean"
+        },
+        {
+          "name": "frame_transfer",
+          "value": false,
+          "group": "Readout",
+          "editable": true,
+          "type": "boolean"
+        },
+        {
+          "name": "baseline_clamp",
+          "value": true,
+          "group": "Readout",
+          "editable": true,
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "Cooling",
+      "parameters": [
+        {
+          "name": "cooler",
+          "value": true,
+          "group": "Cooling",
+          "editable": true,
+          "type": "boolean"
+        },
+        {
+          "name": "target_temperature",
+          "value": -80,
+          "group": "Cooling",
+          "editable": true,
+          "type": "number",
+          "units": "\u00b0C",
+          "min": -120,
+          "max": -20
+        },
+        {
+          "name": "temperature",
+          "value": -80.05,
+          "group": "Cooling",
+          "editable": false,
+          "type": "number",
+          "units": "\u00b0C",
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "temperature_status",
+          "value": "stabilized",
+          "group": "Cooling",
+          "editable": false,
+          "type": "list",
+          "options": [
+            "off",
+            "not_stabilized",
+            "stabilized",
+            "not_reached",
+            "drift",
+            "out_of_range",
+            "not_supported",
+            "acquiring",
+            "unknown"
+          ]
+        },
+        {
+          "name": "fan_mode",
+          "value": "full",
+          "group": "Cooling",
+          "editable": true,
+          "type": "list",
+          "options": [
+            "full",
+            "low",
+            "off"
+          ]
+        }
+      ]
+    }
+  ],
+  "actions": [
+    "More properties"
+  ]
+}

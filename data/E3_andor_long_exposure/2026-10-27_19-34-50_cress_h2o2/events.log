@@ -1,0 +1,30 @@
+2026-10-27 19:34:50  run folder C:\Users\Martin\ImSwitchConfig\imnotebook\BIOPHOTON\data\E3_andor_long_exposure\2026-10-27_19-34-50_cress_h2o2
+2026-10-27 19:34:52  camera read back: {'output_amplifier': 'Electron Multiplying', 'readout_rate': '1 MHz', 'gain': 300, 'binning': 4, 'cooler': True, 'target_temperature': -80}
+2026-10-27 19:34:52  sensor at -79.9 °C
+2026-10-27 19:34:52  step 0 'frame': 1800 s frames, for 43200 s
+2026-10-27 20:04:57  saved frame_0000 (1800 s, median 4027.0)
+2026-10-27 20:35:02  saved frame_0001 (1800 s, median 3976.0)
+2026-10-27 21:05:06  saved frame_0002 (1800 s, median 3941.0)
+2026-10-27 21:35:10  saved frame_0003 (1800 s, median 3951.5)
+2026-10-27 22:05:15  saved frame_0004 (1800 s, median 3899.0)
+2026-10-27 22:35:20  saved frame_0005 (1800 s, median 3858.0)
+2026-10-27 23:05:24  saved frame_0006 (1800 s, median 3885.0)
+2026-10-27 23:35:29  saved frame_0007 (1800 s, median 3903.0)
+2026-10-28 00:05:33  saved frame_0008 (1800 s, median 3879.0)
+2026-10-28 00:35:38  saved frame_0009 (1800 s, median 3897.0)
+2026-10-28 01:05:42  saved frame_0010 (1800 s, median 3891.0)
+2026-10-28 01:35:46  saved frame_0011 (1800 s, median 3886.0)
+2026-10-28 02:05:51  saved frame_0012 (1800 s, median 3869.0)
+2026-10-28 02:35:56  saved frame_0013 (1800 s, median 3866.0)
+2026-10-28 03:06:00  saved frame_0014 (1800 s, median 3868.0)
+2026-10-28 03:36:04  saved frame_0015 (1800 s, median 3863.0)
+2026-10-28 04:06:09  saved frame_0016 (1800 s, median 3884.0)
+2026-10-28 04:36:13  saved frame_0017 (1800 s, median 3860.0)
+2026-10-28 05:06:16  saved frame_0018 (1800 s, median 3855.0)
+2026-10-28 05:36:21  saved frame_0019 (1800 s, median 3895.5)
+2026-10-28 06:06:25  saved frame_0020 (1800 s, median 3843.0)
+2026-10-28 06:36:30  saved frame_0021 (1800 s, median 3805.0)
+2026-10-28 07:06:34  saved frame_0022 (1800 s, median 3834.0)
+2026-10-28 07:36:39  saved frame_0023 (1800 s, median 3867.5)
+2026-10-28 07:36:39  acquisition done: 24 frames
+2026-10-28 07:36:41  run finished

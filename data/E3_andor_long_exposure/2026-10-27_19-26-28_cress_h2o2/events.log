@@ -1,0 +1,2 @@
+2026-10-27 19:26:28  run folder C:\Users\Martin\ImSwitchConfig\imnotebook\BIOPHOTON\data\E3_andor_long_exposure\2026-10-27_19-26-28_cress_h2o2
+2026-10-27 19:26:30  camera read back: {'output_amplifier': 'Electron Multiplying', 'readout_rate': '1 MHz', 'gain': 300, 'binning': 4, 'cooler': True, 'target_temperature': -95}

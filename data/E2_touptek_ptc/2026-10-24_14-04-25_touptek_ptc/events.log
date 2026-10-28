@@ -1,0 +1,2 @@
+2026-10-24 14:04:25  run folder C:\Users\Martin\ImSwitchConfig\imnotebook\BIOPHOTON\data\E2_touptek_ptc\2026-10-24_14-04-25_touptek_ptc
+2026-10-24 14:04:43  camera read back: {'exposure_mode': 'manual', 'pixel_format': 'mono16', 'conversion_gain': 'HCG', 'low_noise': True, 'gain': 23.0, 'blacklevel': 1000, 'target_temperature': -30.0}

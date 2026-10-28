@@ -1,0 +1,3 @@
+2026-10-24 13:42:36  run folder C:\Users\Martin\ImSwitchConfig\imnotebook\BIOPHOTON\data\E2_touptek_ptc\2026-10-24_13-42-36_touptek_ptc
+2026-10-24 13:42:55  camera read back: {'exposure_mode': 'manual', 'pixel_format': 'mono16', 'conversion_gain': 'HCG', 'low_noise': True, 'gain': 23.0, 'blacklevel': 1000, 'target_temperature': -30.0}
+2026-10-24 13:52:52  camera reports no temperature, not waiting for the cooler

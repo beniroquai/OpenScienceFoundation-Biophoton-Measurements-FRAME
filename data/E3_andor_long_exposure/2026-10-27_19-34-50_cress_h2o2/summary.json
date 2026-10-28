@@ -1,0 +1,21 @@
+{
+  "frames": 24,
+  "mode": "integrated",
+  "unit": "ADU / px / s",
+  "total_exposure_h": 12.0,
+  "time_axis": "since run start",
+  "rois": {
+    "sample": null,
+    "background": null
+  },
+  "warnings": [
+    "no sample ROI set: whole frame used",
+    "no background ROI or offset: rates include the camera offset"
+  ],
+  "rate": 2.580371307847192,
+  "rate_error": 0.00589172639874948,
+  "camera_temperature_c_min_max": [
+    -80.05,
+    -79.89
+  ]
+}

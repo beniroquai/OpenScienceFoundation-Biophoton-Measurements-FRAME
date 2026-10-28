@@ -1,0 +1,40 @@
+# Extended definitions for calibration results.
+# Written in the YAML format, readable by humans and machines
+# Written by David McFadden, FSU Jena
+# NanoImagingPack library: https://github.com/bionanoimaging/NanoImagingPack
+# Questions, bugs and requests to: david.mcfadden777@gmail.com
+# heintzmann@gmail.com
+        
+Dark images: Number of dark images used for calibration
+Bright images: Number of bright images used for calibration
+Illumination fluctuation: "Illumination fluctuation for bright images. The fluctuation
+  in the total amount of light between the bright frames. If this value is high, it
+  suggests an unstable light source or possibly problems with the detector's acquisition. "
+Hot or Cold pixels excluded: Total number of excluded hot or cold pixels. Pixels
+  are considered hot or cold if their mean value in the background image is more
+  than 4 standard deviations removed from the background values of all 
+  background image pixels.
+Bright image dynamic range [factor]: Bright image dynamic range, expressed as a 
+  factor. It represents the difference between the darkest and brightest parts 
+  of the bright calibration images. Above 20 is good.
+Noisy pixels excluded: Percentage of pixels which were excluded. By default, 2% 
+  of the noisiest background pixels are excluded from the analysis. This deals 
+  with RTS noise in CMOS cameras. CCD and scanning imagers should be unaffected.
+Noise exclusion threshold [e-]: Threshold for exclusion for noisy pixels. Units 
+  are electrons.
+Background [ADU]: The background, or black level of the signal, obtained by the 
+  mean pixel value of the dark exposures. Units are ADU.
+Gain [e- / ADU]: Conversion factor (Gain) determined by fit to photon transfer 
+  curve.
+Readnoise, RMS [e-]: The mean readnoise, calculated by multiplying the mean of 
+  the individual pixel standard deviations with the gain. Units are 
+  photoelectrons.
+Readnoise, median  [e-]: The median readnoise, which is a commonly quoted metric
+  for CMOS cameras. Units are electrons.
+Linearity Error: Mean absolute deviation from fit within linearity fit range.
+Fixed pattern offset std. [e-]: Gain multiplied with standard deviation of the 
+  background mean projection. Units are electrons.
+Total electrons per exposure [e-]: The mean number of photoelectrons per 
+  exposure. The background is subtracted from the signal, and the sum is 
+  multiplied by the gain estimate. Incorrect if a significant number of pixels 
+  are saturated.

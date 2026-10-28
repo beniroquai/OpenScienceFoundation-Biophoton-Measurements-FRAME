@@ -1,0 +1,9 @@
+2026-10-24 15:56:31  run folder C:\Users\Martin\ImSwitchConfig\imnotebook\BIOPHOTON\data\E4_touptek_long_exposure\2026-10-24_15-56-31_cress_h2o2
+2026-10-24 15:56:48  camera read back: {'exposure_mode': 'manual', 'pixel_format': 'mono16', 'conversion_gain': 'HCG', 'low_noise': True, 'gain': 23.0, 'blacklevel': 1000, 'target_temperature': -30.0}
+2026-10-24 15:56:53  sensor at -25.0 °C
+2026-10-24 15:56:57  step 0 'frame': 5 s frames, 3 of them
+2026-10-24 15:57:11  saved frame_0000 (5 s, median 1493.0)
+2026-10-24 15:57:24  saved frame_0001 (5 s, median 1467.0)
+2026-10-24 15:57:38  saved frame_0002 (5 s, median 1467.0)
+2026-10-24 15:57:38  acquisition done: 3 frames
+2026-10-24 15:57:42  run finished

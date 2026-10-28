@@ -1,0 +1,353 @@
+{
+  "model": "CameraToupcam",
+  "isMock": false,
+  "isConnected": true,
+  "isRGB": false,
+  "sensorWidth": 2992,
+  "sensorHeight": 3000,
+  "currentWidth": 2992,
+  "currentHeight": 3000,
+  "pixelSizeUm": [
+    1,
+    1.3,
+    1.3
+  ],
+  "binning": 1,
+  "supportedBinnings": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "frameStart": [
+    0,
+    0
+  ],
+  "croppable": true,
+  "forAcquisition": true,
+  "forFocusLock": false,
+  "cameraType": "Toupcam",
+  "parameterRanges": {
+    "exposure": {
+      "min": 0.1,
+      "max": 3600000.0,
+      "units": "ms"
+    },
+    "gain": {
+      "min": 0.0,
+      "max": 23.0,
+      "units": "arb.u."
+    },
+    "blacklevel": {
+      "min": 0,
+      "max": 1984,
+      "units": "ADU"
+    }
+  },
+  "isLongExposure": true,
+  "isAcquiring": false,
+  "isAdjustingParameters": false,
+  "hardwareParameters": {
+    "model_name": "MTR3CMOS09000KMA",
+    "serial_number": "ZP260305260120247",
+    "firmware_version": "4.6.7.20221118",
+    "hardware_version": "4.0",
+    "sensor_width": 2992,
+    "sensor_height": 3000,
+    "bit_depth": 16,
+    "sensor_bit_depth": 14,
+    "max_adu": 16383,
+    "isRGB": false,
+    "exposure_us": 5000000,
+    "exposure_range_us": [
+      100,
+      3600000000
+    ],
+    "exposure_ms": 5000.0,
+    "exposure_range_ms": [
+      0.1,
+      3600000.0
+    ],
+    "gain": 23.0,
+    "gain_range": [
+      0.0,
+      23.0
+    ],
+    "gain_percent": 10000,
+    "gain_range_percent": [
+      100,
+      10000
+    ],
+    "long_exposure_threshold_ms": 2000.0,
+    "is_long_exposure": true,
+    "temperature_c": 1.8,
+    "tec_on": true,
+    "tec_target_c": -30.0,
+    "tec_over_temperature": false,
+    "tec_shutdown_c": 30.0,
+    "tec_target_range_c": [
+      -50.0,
+      40.0
+    ],
+    "tec_stalled": false,
+    "fan_speed": 1,
+    "supports_heat": true,
+    "supports_low_noise": true,
+    "supports_conversion_gain": true,
+    "supports_blacklevel": true,
+    "conversion_gain": "HCG",
+    "low_noise": true,
+    "heat": 0,
+    "heat_max": 4,
+    "blacklevel_autoadjust": null,
+    "blacklevel": 1000,
+    "blacklevel_max": 1984
+  },
+  "currentTriggerSource": "Continuous (Free Run)",
+  "availableTriggerTypes": [
+    "Continuous (Free Run)",
+    "Software Trigger"
+  ],
+  "detectorName": "WidefieldCamera",
+  "groups": [
+    {
+      "name": "Misc",
+      "parameters": [
+        {
+          "name": "exposure",
+          "value": 5000.0,
+          "group": "Misc",
+          "editable": true,
+          "type": "number",
+          "units": "ms",
+          "min": 0.1,
+          "max": 3600000.0
+        },
+        {
+          "name": "gain",
+          "value": 23.0,
+          "group": "Misc",
+          "editable": true,
+          "type": "number",
+          "units": "arb.u.",
+          "min": 0.0,
+          "max": 23.0
+        },
+        {
+          "name": "blacklevel",
+          "value": 1000,
+          "group": "Misc",
+          "editable": true,
+          "type": "number",
+          "units": "ADU",
+          "min": 0,
+          "max": 1984
+        },
+        {
+          "name": "image_width",
+          "value": 2992,
+          "group": "Misc",
+          "editable": false,
+          "type": "number",
+          "units": "arb.u.",
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "image_height",
+          "value": 3000,
+          "group": "Misc",
+          "editable": false,
+          "type": "number",
+          "units": "arb.u.",
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "frame_rate",
+          "value": -1,
+          "group": "Misc",
+          "editable": true,
+          "type": "number",
+          "units": "fps",
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "frame_number",
+          "value": 1,
+          "group": "Misc",
+          "editable": false,
+          "type": "number",
+          "units": "frames",
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "exposure_mode",
+          "value": "manual",
+          "group": "Misc",
+          "editable": true,
+          "type": "list",
+          "options": [
+            "manual",
+            "auto"
+          ]
+        },
+        {
+          "name": "flat_fielding",
+          "value": true,
+          "group": "Misc",
+          "editable": true,
+          "type": "boolean"
+        },
+        {
+          "name": "mode",
+          "value": "WidefieldCamera",
+          "group": "Misc",
+          "editable": false,
+          "type": "boolean"
+        },
+        {
+          "name": "previewMinValue",
+          "value": 0,
+          "group": "Misc",
+          "editable": true,
+          "type": "number",
+          "units": "arb.u.",
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "previewMaxValue",
+          "value": 16383,
+          "group": "Misc",
+          "editable": true,
+          "type": "number",
+          "units": "arb.u.",
+          "min": null,
+          "max": null
+        }
+      ]
+    },
+    {
+      "name": "Acquisition mode",
+      "parameters": [
+        {
+          "name": "trigger_source",
+          "value": "Continous",
+          "group": "Acquisition mode",
+          "editable": true,
+          "type": "list",
+          "options": [
+            "Continous",
+            "Internal trigger",
+            "External trigger"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Miscellaneous",
+      "parameters": [
+        {
+          "name": "Camera pixel size",
+          "value": 1.3,
+          "group": "Miscellaneous",
+          "editable": true,
+          "type": "number",
+          "units": "\u00b5m",
+          "min": null,
+          "max": null
+        }
+      ]
+    },
+    {
+      "name": "Image format",
+      "parameters": [
+        {
+          "name": "pixel_format",
+          "value": "mono16",
+          "group": "Image format",
+          "editable": true,
+          "type": "list",
+          "options": [
+            "mono8",
+            "mono16"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Low noise",
+      "parameters": [
+        {
+          "name": "conversion_gain",
+          "value": "HCG",
+          "group": "Low noise",
+          "editable": true,
+          "type": "list",
+          "options": [
+            "LCG",
+            "HCG"
+          ]
+        },
+        {
+          "name": "low_noise",
+          "value": true,
+          "group": "Low noise",
+          "editable": true,
+          "type": "boolean"
+        },
+        {
+          "name": "heat",
+          "value": 0,
+          "group": "Low noise",
+          "editable": true,
+          "type": "number",
+          "units": "level",
+          "min": 0,
+          "max": 4
+        }
+      ]
+    },
+    {
+      "name": "Cooling",
+      "parameters": [
+        {
+          "name": "target_temperature",
+          "value": -30.0,
+          "group": "Cooling",
+          "editable": true,
+          "type": "number",
+          "units": "\u00b0C",
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "temperature",
+          "value": 1.8,
+          "group": "Cooling",
+          "editable": false,
+          "type": "number",
+          "units": "\u00b0C",
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "fan_speed",
+          "value": 1,
+          "group": "Cooling",
+          "editable": true,
+          "type": "number",
+          "units": "arb.u.",
+          "min": null,
+          "max": null
+        }
+      ]
+    }
+  ],
+  "actions": [
+    "More properties"
+  ]
+}

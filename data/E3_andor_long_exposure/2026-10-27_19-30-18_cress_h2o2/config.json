@@ -1,0 +1,50 @@
+{
+  "kind": "timecourse",
+  "experiment": "E3",
+  "title": "E3 - Andor EMCCD, long exposures over time",
+  "description": "Back-to-back 30 min exposures of an injured leaf in 2 % H2O2 on the Andor iXon DU888 EMCCD (4x4 binning, EM gain 300, 1 MHz, deep cooling) until the leaf dries out (~12 h). Same protocol as E4 on the ToupTek. **Run this first**: it answers whether the sample glows above background and how strongly, which sets the frame time for E1 and tells us whether the ToupTek has a chance.",
+  "sample": {
+    "species": "Lepidium sativum (garden cress)",
+    "treatment": "injured + 2 % H2O2",
+    "prepared_at": null,
+    "notes": ""
+  },
+  "server": "http://192.168.178.50:80/imswitch/api",
+  "detector": "Andor",
+  "dry_run": true,
+  "camera_settings": {
+    "output_amplifier": "Electron Multiplying",
+    "readout_rate": "1 MHz",
+    "gain": 300,
+    "binning": 4,
+    "cooler": true,
+    "target_temperature": -80
+  },
+  "camera_readback": {
+    "output_amplifier": "Electron Multiplying",
+    "readout_rate": "1 MHz",
+    "gain": 300,
+    "binning": 4,
+    "cooler": true,
+    "target_temperature": -80
+  },
+  "steps": [
+    {
+      "label": "frame",
+      "exposure_ms": 5000,
+      "n_frames": 3,
+      "duration_s": null
+    }
+  ],
+  "analysis": {
+    "mode": "integrated",
+    "label": "frame",
+    "window_min": 60,
+    "e_per_adu": null,
+    "em_gain": 300
+  },
+  "rois": {
+    "sample": null,
+    "background": null
+  }
+}
