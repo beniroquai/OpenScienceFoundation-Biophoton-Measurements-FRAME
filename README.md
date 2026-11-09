@@ -10,6 +10,7 @@ All samples: injured leaves in 2 % H2O2. All acquisitions go through ImSwitch wi
 | 2 | `E1_andor_photon_counting.ipynb` | 90 s frames, threshold → photon events, ~12 h. The reference photon budget | Andor, as above | events/px/s over time, event map |
 | 3 | `E2_touptek_ptc_calibration.ipynb` | Photon transfer with the beta light (20 bright + 20 dark) and a dark ladder | ToupTek MTR3CMOS09000KMA, gain 23, HCG, -30 °C | e-/ADU, read noise, offset, dark current vs datasheet |
 | 4 | `E4_touptek_long_exposure.ipynb` | Same protocol as E3, fixed black level 1000, no dark frames | ToupTek, as above | signal over time in e-/px/s (with E2) |
+| after | `E5_denoising.ipynb` | Transients out, noise model from the run itself, GAT + BM3D / DRUNet / Noise2Noise, scored against neighbouring frames | any E1, E3 or E4 run | `denoise/` in the run folder: TIFFs, figures, summary |
 | any | `E0_environment_log.ipynb` | Camera + enclosure temperature, humidity, light, from one or both servers | - | environment.csv + plots |
 
 E1-E4 log their own camera and the enclosure sensors (SHT45, TSL2591) into their run folder;
@@ -52,3 +53,7 @@ files, so clearing a notebook or restarting the kernel loses nothing. `data/` is
 `python test_biophoton.py` checks the analysis on synthetic data: read-noise estimate and photon
 counting on an EMCCD frame with amplifier glow, the temporal PTC, the dark-current fit, and a
 full redraw of synthetic runs.
+
+`python test_denoising.py` checks `denoising.py` (E5) the same way: gain and offset from the frames,
+streak removal, variance stabilisation, the unbiased inverse transform, and that the held-out score
+tracks the true error. E5 needs `pip install deepinv bm3d` on top.

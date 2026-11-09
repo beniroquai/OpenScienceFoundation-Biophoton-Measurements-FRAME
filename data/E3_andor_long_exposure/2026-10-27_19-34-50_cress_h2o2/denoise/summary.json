@@ -1,0 +1,76 @@
+{
+  "run": "data/E3_andor_long_exposure/2026-10-27_19-34-50_cress_h2o2",
+  "detector": "Andor",
+  "mode": "integrated",
+  "binning": 1,
+  "crop": null,
+  "frames": 24,
+  "compared_frame": 12,
+  "noise_model": {
+    "gain_adu_per_count": 153.7419589909678,
+    "intercept_adu2": -74425.1008344098,
+    "read_noise_adu": 0.0,
+    "offset_adu": 484.091014078871,
+    "read_noise_counts": 0.0,
+    "fit_rel_residual_rms": 0.02289856963014187,
+    "frames": 24
+  },
+  "transient_fraction": 0.04654884338378906,
+  "masked_pixel_fraction": 0.01483154296875,
+  "median_counts_per_frame": 22.26398706238823,
+  "stabilised_std_overall": 1.008808943403435,
+  "stabilised_std_range": [
+    0.9785105591661896,
+    1.0523004377901466
+  ],
+  "heldout_error": {
+    "raw frame": 1.0357218220976023,
+    "mean of 4 nearby frames": 0.268097085420534,
+    "mean of 21 frames": 0.07904864478448237,
+    "GAT + DRUNet": 0.14029953647587112,
+    "DRUNet, no GAT": 0.16838233717437978,
+    "GAT + Noise2Noise": 0.13769370956286464
+  },
+  "roi_mean_ratio": {
+    "raw frame": {
+      "frame": 1.0
+    },
+    "mean of 4 nearby frames": {
+      "frame": 0.999320606295525
+    },
+    "mean of 21 frames": {
+      "frame": 1.0042612914509064
+    },
+    "GAT + DRUNet": {
+      "frame": 0.9981050443695135
+    },
+    "DRUNet, no GAT": {
+      "frame": 0.9975561584278324
+    },
+    "GAT + Noise2Noise": {
+      "frame": 0.9993188550100683
+    }
+  },
+  "seconds": {
+    "GAT + DRUNet": 26.609201908111572,
+    "DRUNet, no GAT": 1.731780767440796,
+    "GAT + Noise2Noise": 1502.0315799713135
+  },
+  "best_method": "GAT + Noise2Noise",
+  "sum_method": "GAT + DRUNet",
+  "settings": {
+    "transient_sigma": 5.0,
+    "transient_dilate": [
+      1,
+      15
+    ],
+    "noisy_pixel_ratio": 3.0,
+    "n2n_steps": 1500,
+    "methods": [
+      "bm3d",
+      "drunet",
+      "drunet_no_gat",
+      "noise2noise"
+    ]
+  }
+}
