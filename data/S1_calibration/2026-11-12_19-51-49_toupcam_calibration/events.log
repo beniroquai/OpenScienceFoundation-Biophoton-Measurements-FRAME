@@ -1,0 +1,85 @@
+2026-11-12 19:51:49  run folder /home/pi/OpenScienceFoundation-Biophoton-Measurements-FRAME/data/S1_calibration/2026-11-12_19-51-49_toupcam_calibration
+2026-11-12 19:51:49  camera read back: {'exposure_mode': 'manual', 'pixel_format': 'mono16', 'conversion_gain': 'HCG', 'low_noise': True, 'gain': 23.0, 'blacklevel': 1000, 'target_temperature': -28.0}
+2026-11-12 19:51:49  not waiting for the cooler (dry run or simulation)
+2026-11-12 19:51:54  shutter open
+2026-11-12 19:52:00  exposure check at 2000 ms: /recordings/2026-11-12/2026-11-12T19-51-54-995514_2026-11-12_19-51-49_toupcam_calibration_check_WidefieldCamera.ome.tiff
+2026-11-12 19:52:07  shutter closed
+2026-11-12 19:52:07  step 0 'bias': 0.001 s frames, 4 of them
+2026-11-12 19:52:12  saved bias_0000 (0.001 s, median 913.0)
+2026-11-12 19:52:18  saved bias_0001 (0.001 s, median 913.0)
+2026-11-12 19:52:23  saved bias_0002 (0.001 s, median 913.0)
+2026-11-12 19:52:29  saved bias_0003 (0.001 s, median 913.0)
+2026-11-12 19:52:33  shutter open
+2026-11-12 19:52:37  step 1 'ptc_light': 0.05 s frames, 4 of them
+2026-11-12 19:52:47  saved ptc_light_0004 (0.05 s, median 913.0)
+2026-11-12 19:52:53  saved ptc_light_0005 (0.05 s, median 913.0)
+2026-11-12 19:52:59  saved ptc_light_0006 (0.05 s, median 913.0)
+2026-11-12 19:53:04  saved ptc_light_0007 (0.05 s, median 912.0)
+2026-11-12 19:53:10  shutter closed
+2026-11-12 19:53:10  step 2 'ptc_dark': 0.05 s frames, 4 of them
+2026-11-12 19:53:16  saved ptc_dark_0008 (0.05 s, median 912.0)
+2026-11-12 19:53:23  saved ptc_dark_0009 (0.05 s, median 912.0)
+2026-11-12 19:53:29  saved ptc_dark_0010 (0.05 s, median 912.0)
+2026-11-12 19:53:34  saved ptc_dark_0011 (0.05 s, median 912.0)
+2026-11-12 19:53:39  shutter open
+2026-11-12 19:53:40  step 3 'ptc_light': 0.1 s frames, 4 of them
+2026-11-12 19:53:46  saved ptc_light_0012 (0.1 s, median 913.0)
+2026-11-12 19:53:52  saved ptc_light_0013 (0.1 s, median 913.0)
+2026-11-12 19:53:57  saved ptc_light_0014 (0.1 s, median 913.0)
+2026-11-12 19:54:03  saved ptc_light_0015 (0.1 s, median 913.0)
+2026-11-12 19:54:09  shutter closed
+2026-11-12 19:54:09  step 4 'ptc_dark': 0.1 s frames, 4 of them
+2026-11-12 19:54:14  saved ptc_dark_0016 (0.1 s, median 913.0)
+2026-11-12 19:54:20  saved ptc_dark_0017 (0.1 s, median 913.0)
+2026-11-12 19:54:25  saved ptc_dark_0018 (0.1 s, median 913.0)
+2026-11-12 19:54:53  saved ptc_dark_0019 (0.1 s, median 912.0)
+2026-11-12 19:54:57  shutter open
+2026-11-12 19:54:57  step 5 'ptc_light': 0.2 s frames, 4 of them
+2026-11-12 19:55:03  saved ptc_light_0020 (0.2 s, median 914.0)
+2026-11-12 19:55:08  saved ptc_light_0021 (0.2 s, median 914.0)
+2026-11-12 19:55:14  saved ptc_light_0022 (0.2 s, median 914.0)
+2026-11-12 19:55:20  saved ptc_light_0023 (0.2 s, median 914.0)
+2026-11-12 19:55:25  shutter closed
+2026-11-12 19:55:25  step 6 'ptc_dark': 0.2 s frames, 4 of them
+2026-11-12 19:55:31  saved ptc_dark_0024 (0.2 s, median 914.0)
+2026-11-12 19:55:43  saved ptc_dark_0025 (0.2 s, median 914.0)
+2026-11-12 19:56:00  saved ptc_dark_0026 (0.2 s, median 913.0)
+2026-11-12 19:56:13  saved ptc_dark_0027 (0.2 s, median 913.0)
+2026-11-12 19:56:17  shutter open
+2026-11-12 19:56:17  step 7 'ptc_light': 0.5 s frames, 4 of them
+2026-11-12 19:56:23  saved ptc_light_0028 (0.5 s, median 919.0)
+2026-11-12 19:56:30  saved ptc_light_0029 (0.5 s, median 919.0)
+2026-11-12 19:56:36  saved ptc_light_0030 (0.5 s, median 918.0)
+2026-11-12 19:56:42  saved ptc_light_0031 (0.5 s, median 918.0)
+2026-11-12 19:56:47  shutter closed
+2026-11-12 19:56:47  step 8 'ptc_dark': 0.5 s frames, 4 of them
+2026-11-12 19:56:53  saved ptc_dark_0032 (0.5 s, median 919.0)
+2026-11-12 19:57:05  saved ptc_dark_0033 (0.5 s, median 918.0)
+2026-11-12 19:57:18  saved ptc_dark_0034 (0.5 s, median 918.0)
+2026-11-12 19:57:24  saved ptc_dark_0035 (0.5 s, median 918.0)
+2026-11-12 19:57:29  shutter open
+2026-11-12 19:57:29  step 9 'ptc_light': 1 s frames, 4 of them
+2026-11-12 19:57:35  saved ptc_light_0036 (1 s, median 927.0)
+2026-11-12 19:57:41  saved ptc_light_0037 (1 s, median 927.0)
+2026-11-12 19:57:47  saved ptc_light_0038 (1 s, median 927.0)
+2026-11-12 19:57:52  saved ptc_light_0039 (1 s, median 927.0)
+2026-11-12 19:57:58  shutter closed
+2026-11-12 19:57:58  step 10 'ptc_dark': 1 s frames, 4 of them
+2026-11-12 19:58:04  saved ptc_dark_0040 (1 s, median 927.0)
+2026-11-12 19:58:56  saved ptc_dark_0041 (1 s, median 927.0)
+2026-11-12 19:59:22  saved ptc_dark_0042 (1 s, median 927.0)
+2026-11-12 19:59:28  saved ptc_dark_0043 (1 s, median 927.0)
+2026-11-12 19:59:32  shutter open
+2026-11-12 19:59:32  step 11 'ptc_light': 2 s frames, 4 of them
+2026-11-12 19:59:40  saved ptc_light_0044 (2 s, median 948.0)
+2026-11-12 19:59:46  saved ptc_light_0045 (2 s, median 948.0)
+2026-11-12 19:59:52  saved ptc_light_0046 (2 s, median 947.0)
+2026-11-12 20:00:07  saved ptc_light_0047 (2 s, median 947.0)
+2026-11-12 20:00:13  shutter closed
+2026-11-12 20:00:13  step 12 'ptc_dark': 2 s frames, 4 of them
+2026-11-12 20:00:23  saved ptc_dark_0048 (2 s, median 948.0)
+2026-11-12 20:00:49  saved ptc_dark_0049 (2 s, median 947.0)
+2026-11-12 20:01:22  saved ptc_dark_0050 (2 s, median 948.0)
+2026-11-12 20:01:27  saved ptc_dark_0051 (2 s, median 948.0)
+2026-11-12 20:01:27  acquisition done: 52 frames
+2026-11-12 20:01:27  run finished

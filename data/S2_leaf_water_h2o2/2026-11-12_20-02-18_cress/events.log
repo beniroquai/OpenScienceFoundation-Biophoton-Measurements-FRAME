@@ -1,0 +1,30 @@
+2026-11-12 20:02:18  run folder /home/pi/OpenScienceFoundation-Biophoton-Measurements-FRAME/data/S2_leaf_water_h2o2/2026-11-12_20-02-18_cress
+2026-11-12 20:02:18  camera read back: {'exposure_mode': 'manual', 'pixel_format': 'mono16', 'conversion_gain': 'HCG', 'low_noise': True, 'gain': 23.0, 'blacklevel': 1000, 'target_temperature': -28.0}
+2026-11-12 20:02:18  not waiting for the cooler (dry run or simulation)
+2026-11-12 20:02:18  operator (dry run, not waiting): EXCHANGE the medium for water (flush the chamber, keep it dark)
+2026-11-12 20:02:18  medium is now water
+2026-11-12 20:02:25  shutter closed
+2026-11-12 20:02:25  step 1 'dark': 5 s frames, 1 of them
+2026-11-12 20:02:36  saved dark_0000 (5 s, median 1019.0)
+2026-11-12 20:02:40  shutter open
+2026-11-12 20:02:40  step 2 'baseline': 5 s frames, 3 of them
+2026-11-12 20:02:51  saved baseline_0001 (5 s, median 1021.0)
+2026-11-12 20:03:02  saved baseline_0002 (5 s, median 1022.0)
+2026-11-12 20:03:17  saved baseline_0003 (5 s, median 1022.0)
+2026-11-12 20:03:24  shutter closed
+2026-11-12 20:03:24  step 3 'dark': 5 s frames, 1 of them
+2026-11-12 20:03:34  saved dark_0004 (5 s, median 1024.0)
+2026-11-12 20:03:34  operator (dry run, not waiting): EXCHANGE the medium for h2o2 (flush the chamber, keep it dark)
+2026-11-12 20:03:34  medium is now h2o2
+2026-11-12 20:03:39  shutter open
+2026-11-12 20:03:39  step 5 'response': 5 s frames, 3 of them
+2026-11-12 20:03:49  saved response_0005 (5 s, median 1025.0)
+2026-11-12 20:04:00  saved response_0006 (5 s, median 1025.0)
+2026-11-12 20:04:11  saved response_0007 (5 s, median 1025.0)
+2026-11-12 20:04:17  shutter closed
+2026-11-12 20:04:17  step 6 'dark': 5 s frames, 1 of them
+2026-11-12 20:04:39  saved dark_0008 (5 s, median 1027.0)
+2026-11-12 20:04:39  step 7 'dark': 5 s frames, 1 of them
+2026-11-12 20:04:50  saved dark_0009 (5 s, median 1027.0)
+2026-11-12 20:04:50  acquisition done: 10 frames
+2026-11-12 20:04:59  run finished
