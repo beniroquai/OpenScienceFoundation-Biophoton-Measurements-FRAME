@@ -13,6 +13,10 @@ All samples: injured leaves in 2 % H2O2. All acquisitions go through ImSwitch wi
 | after | `E5_denoising.ipynb` | Transients out, noise model from the run itself, GAT + BM3D / DRUNet / Noise2Noise, scored against neighbouring frames | any E1, E3 or E4 run | `denoise/` in the run folder: TIFFs, figures, summary |
 | any | `E0_environment_log.ipynb` | Camera + enclosure temperature, humidity, light, from one or both servers | - | environment.csv + plots |
 
+**Slim protocol for the preprint**: `slim/` (S1 calibration with the beta light in the infinity
+space, S2 one leaf per night in water then H2O2 with dark frames from the shutter during the run,
+S3 summary). One operating point and temperature per camera; see `slim/README.md`.
+
 E1-E4 log their own camera and the enclosure sensors (SHT45, TSL2591) into their run folder;
 `OTHER_SERVERS` adds the other rig. E0 is for logging when no experiment runs.
 

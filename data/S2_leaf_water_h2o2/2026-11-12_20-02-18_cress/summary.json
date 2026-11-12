@@ -1,0 +1,41 @@
+{
+  "frames_baseline": 3,
+  "frames_response": 3,
+  "frames_dark": 4,
+  "exchange_h": 0.0192239029539956,
+  "baseline_window_h": 1.5,
+  "response_window_h": 3.0,
+  "unit": "ADU / px / s",
+  "rois": {
+    "sample": null,
+    "background": null
+  },
+  "warnings": [
+    "no sample ROI set: whole frame used"
+  ],
+  "sample_baseline": 0.10400481789841554,
+  "sample_baseline_sem": 0.04835410312404904,
+  "sample_response": -0.007554386073373584,
+  "sample_response_sem": 0.029961340424662926,
+  "sample_difference": -0.11155920397178912,
+  "sample_difference_sem": 0.05688410330640459,
+  "sample_ratio": -0.07263496274520828,
+  "sample_ratio_err": NaN,
+  "sample_peak": 0.04393422639518576,
+  "sample_peak_after_exchange_h": 0.002639428443378871,
+  "dark_level_adu": 1046.059178648472,
+  "dark_exposure_s": 5.0,
+  "dark_drift_adu": 7.693777944365365,
+  "camera_temperature_c_min_max": [
+    11.1,
+    13.5
+  ],
+  "enclosure_temperature_c_min_max": [
+    28.803,
+    28.947
+  ],
+  "humidity_pct_min_max": [
+    30.845,
+    30.982
+  ]
+}

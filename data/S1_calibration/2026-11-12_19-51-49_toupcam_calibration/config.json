@@ -1,0 +1,134 @@
+{
+  "experiment": "S1_calibration",
+  "server": "http://localhost:8001/imswitch/api",
+  "detector": "WidefieldCamera",
+  "camera": "toupcam",
+  "camera_preset": {
+    "label": "ToupTek MTR3CMOS09000KMA (IMX533)",
+    "detector": null,
+    "backend": "recording",
+    "settings": {
+      "exposure_mode": "manual",
+      "pixel_format": "mono16",
+      "conversion_gain": "HCG",
+      "low_noise": true,
+      "gain": 23,
+      "blacklevel": 1000,
+      "target_temperature": -28
+    },
+    "cooldown": {
+      "tolerance_c": 1.0,
+      "timeout_s": 2700
+    },
+    "settle_s": 1200,
+    "excess_noise_sq": 1.0,
+    "pixel_um": 3.76,
+    "readout_binning": 1,
+    "image_binning": 4,
+    "full_scale_adu": 16383,
+    "transient_dilate": [
+      3,
+      3
+    ]
+  },
+  "camera_readback": {
+    "exposure_mode": "manual",
+    "pixel_format": "mono16",
+    "conversion_gain": "HCG",
+    "low_noise": true,
+    "gain": 23.0,
+    "blacklevel": 1000,
+    "target_temperature": -28.0
+  },
+  "dry_run": true,
+  "kind": "slim_calibration",
+  "title": "S1 - calibration, ToupTek MTR3CMOS09000KMA (IMX533)",
+  "description": "Bias, photon transfer and linearity with the beta light in the infinity space, dark current over the ladder, beta light at the sample plane.",
+  "optics": {
+    "name": "4x/0.20 pair",
+    "magnification": 1.0
+  },
+  "steps": [
+    {
+      "label": "bias",
+      "shutter": "closed",
+      "exposure_ms": 1,
+      "n_frames": 4
+    },
+    {
+      "label": "ptc_light",
+      "shutter": "open",
+      "exposure_ms": 50,
+      "n_frames": 4
+    },
+    {
+      "label": "ptc_dark",
+      "shutter": "closed",
+      "exposure_ms": 50,
+      "n_frames": 4
+    },
+    {
+      "label": "ptc_light",
+      "shutter": "open",
+      "exposure_ms": 100,
+      "n_frames": 4
+    },
+    {
+      "label": "ptc_dark",
+      "shutter": "closed",
+      "exposure_ms": 100,
+      "n_frames": 4
+    },
+    {
+      "label": "ptc_light",
+      "shutter": "open",
+      "exposure_ms": 200,
+      "n_frames": 4
+    },
+    {
+      "label": "ptc_dark",
+      "shutter": "closed",
+      "exposure_ms": 200,
+      "n_frames": 4
+    },
+    {
+      "label": "ptc_light",
+      "shutter": "open",
+      "exposure_ms": 500,
+      "n_frames": 4
+    },
+    {
+      "label": "ptc_dark",
+      "shutter": "closed",
+      "exposure_ms": 500,
+      "n_frames": 4
+    },
+    {
+      "label": "ptc_light",
+      "shutter": "open",
+      "exposure_ms": 1000,
+      "n_frames": 4
+    },
+    {
+      "label": "ptc_dark",
+      "shutter": "closed",
+      "exposure_ms": 1000,
+      "n_frames": 4
+    },
+    {
+      "label": "ptc_light",
+      "shutter": "open",
+      "exposure_ms": 2000,
+      "n_frames": 4
+    },
+    {
+      "label": "ptc_dark",
+      "shutter": "closed",
+      "exposure_ms": 2000,
+      "n_frames": 4
+    }
+  ],
+  "analysis": {
+    "pixel_step": 2
+  }
+}

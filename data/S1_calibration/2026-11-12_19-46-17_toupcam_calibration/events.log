@@ -1,0 +1,4 @@
+2026-11-12 19:46:17  run folder /home/pi/OpenScienceFoundation-Biophoton-Measurements-FRAME/data/S1_calibration/2026-11-12_19-46-17_toupcam_calibration
+2026-11-12 19:46:18  camera read back: {'exposure_mode': 'manual', 'pixel_format': 'mono16', 'conversion_gain': 'HCG', 'low_noise': True, 'gain': 23.0, 'blacklevel': 1000, 'target_temperature': -28.0}
+2026-11-12 19:46:18  not waiting for the cooler (dry run or simulation)
+2026-11-12 19:46:23  shutter open

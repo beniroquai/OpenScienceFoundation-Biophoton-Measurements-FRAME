@@ -1,0 +1,43 @@
+{
+  "excess_noise_sq": 1.0,
+  "pixel_step": 2,
+  "offset_adu": 917.25,
+  "read_noise_adu": 54.905980245021276,
+  "bias_frames": 4,
+  "adu_per_e": -96.82591192868331,
+  "e_per_adu": -0.010327813909323627,
+  "ptc_slope_adu": -96.82591192868331,
+  "ptc_intercept_adu2": 1121.548292590647,
+  "ptc_rel_residual_rms": 2.0290499522437746,
+  "ptc_signal_range_adu": [
+    2.8896458527767392,
+    78.76880806275506
+  ],
+  "read_noise_e": -0.567058746479579,
+  "linearity_slope_adu_s": 2.8918630080631025,
+  "linearity_max_residual_pct": 13072.705900451825,
+  "linearity_exposures_s": [
+    0.05,
+    0.1,
+    0.2,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "dark_current_adu_px_s": 21.491365777079928,
+  "dark_current_e_px_s": -0.22195882640288786,
+  "dark_note": "from the short ladder; S2 dark frames give it at the run exposure",
+  "warnings": [],
+  "camera_temperature_c_min_max": [
+    2.9,
+    10.6
+  ],
+  "enclosure_temperature_c_min_max": [
+    27.988,
+    28.76
+  ],
+  "humidity_pct_min_max": [
+    31.078,
+    32.016
+  ]
+}

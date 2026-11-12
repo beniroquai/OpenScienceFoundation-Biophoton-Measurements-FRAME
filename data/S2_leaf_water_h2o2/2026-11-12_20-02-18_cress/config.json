@@ -1,0 +1,116 @@
+{
+  "experiment": "S2_leaf_water_h2o2",
+  "server": "http://localhost:8001/imswitch/api",
+  "detector": "WidefieldCamera",
+  "camera": "toupcam",
+  "camera_preset": {
+    "label": "ToupTek MTR3CMOS09000KMA (IMX533)",
+    "detector": null,
+    "backend": "recording",
+    "settings": {
+      "exposure_mode": "manual",
+      "pixel_format": "mono16",
+      "conversion_gain": "HCG",
+      "low_noise": true,
+      "gain": 23,
+      "blacklevel": 1000,
+      "target_temperature": -28
+    },
+    "cooldown": {
+      "tolerance_c": 1.0,
+      "timeout_s": 2700
+    },
+    "settle_s": 1200,
+    "excess_noise_sq": 1.0,
+    "pixel_um": 3.76,
+    "readout_binning": 1,
+    "image_binning": 4,
+    "full_scale_adu": 16383,
+    "transient_dilate": [
+      3,
+      3
+    ]
+  },
+  "camera_readback": {
+    "exposure_mode": "manual",
+    "pixel_format": "mono16",
+    "conversion_gain": "HCG",
+    "low_noise": true,
+    "gain": 23.0,
+    "blacklevel": 1000,
+    "target_temperature": -28.0
+  },
+  "dry_run": true,
+  "kind": "slim_leaf",
+  "title": "S2 - cress_01: water then h2o2",
+  "description": "injured leaf in the flow chamber, water baseline, exchange to h2o2, dark frames from the shutter during the run.",
+  "condition": "leaf",
+  "sample": {
+    "id": "cress_01",
+    "species": "Lepidium sativum (garden cress)",
+    "injury": "cut",
+    "h2o2": "2 %",
+    "prepared_at": null,
+    "notes": "",
+    "mounted": "injured leaf"
+  },
+  "optics": {
+    "name": "4x/0.20 pair",
+    "magnification": 1.0
+  },
+  "steps": [
+    {
+      "label": "fill",
+      "exchange": "water"
+    },
+    {
+      "label": "dark",
+      "shutter": "closed",
+      "exposure_ms": 5000,
+      "n_frames": 1
+    },
+    {
+      "label": "baseline",
+      "shutter": "open",
+      "exposure_ms": 5000,
+      "n_frames": 3
+    },
+    {
+      "label": "dark",
+      "shutter": "closed",
+      "exposure_ms": 5000,
+      "n_frames": 1
+    },
+    {
+      "label": "exchange",
+      "exchange": "h2o2"
+    },
+    {
+      "label": "response",
+      "shutter": "open",
+      "exposure_ms": 5000,
+      "n_frames": 3
+    },
+    {
+      "label": "dark",
+      "shutter": "closed",
+      "exposure_ms": 5000,
+      "n_frames": 1
+    },
+    {
+      "label": "dark",
+      "shutter": "closed",
+      "exposure_ms": 5000,
+      "n_frames": 1
+    }
+  ],
+  "analysis": {
+    "baseline_window_h": 1.5,
+    "response_window_h": 3.0,
+    "e_per_adu": null
+  },
+  "rois": {
+    "sample": null,
+    "background": null
+  }
+}
