@@ -224,6 +224,118 @@ def snap_mmcore(client, detector, name, exposure_ms, stop_event=None, poll_s=5, 
 
 
 # --------------------------------------------------------------------------------------------
+# Dark slider and pumps on the PWM ("laser") channels of the UC2 board
+# --------------------------------------------------------------------------------------------
+def laser_act(client, channel, value, retries=3):
+    """PWM channel 1-4 of the UC2 board to `value` (0-1023): the /laser_act of the serial console,
+    sent through UC2ConfigController/writeSerial, so no `lasers` entry in the setup is needed.
+    Setting a value twice does no harm, so a failed request is simply sent again."""
+    payload = {"payload": json.dumps({"task": "/laser_act", "LASERid": int(channel),
+                                      "LASERval": int(value)})}
+    for attempt in range(retries):
+        try:
+            return client.get_json(f"{client.base_uri}/UC2ConfigController/writeSerial", payload)
+        except Exception:
+            if attempt == retries - 1:
+                raise
+            time.sleep(1)
+
+
+class DarkSlider:
+    """Motorised slider on channels 1 and 2 (one motor, one channel per direction).
+
+    Channel 1 drives it to the beta light, channel 2 to fully open. It has no position sensor:
+    the ends are reached by driving `travel_s` against the stop, the middle ("dark") by driving
+    `middle_s` from the open end towards the beta light. The motor is switched off once it
+    arrived, so it neither heats the camera nor stalls for hours.
+    Positions: "beta" (beta light in the beam), "dark" (beam blocked), "open" (sample).
+    """
+
+    def __init__(self, client, beta_channel=1, open_channel=2, travel_s=3.0, middle_s=1.0,
+                 value=1023, log=print):
+        self.client, self.beta_channel, self.open_channel = client, beta_channel, open_channel
+        self.travel_s, self.middle_s, self.value, self.log = travel_s, middle_s, value, log
+        self.position = None
+
+    def stop(self):
+        laser_act(self.client, self.beta_channel, 0)
+        laser_act(self.client, self.open_channel, 0)
+
+    def _drive(self, channel, seconds):
+        other = self.open_channel if channel == self.beta_channel else self.beta_channel
+        laser_act(self.client, other, 0)
+        laser_act(self.client, channel, self.value)
+        try:
+            time.sleep(seconds)
+        finally:
+            laser_act(self.client, channel, 0)
+
+    def move(self, position):
+        if position not in ("beta", "dark", "open"):
+            raise ValueError(f"slider position {position!r}")
+        if position == "beta":
+            self._drive(self.beta_channel, self.travel_s)
+        else:
+            self._drive(self.open_channel, self.travel_s)
+            if position == "dark":
+                self._drive(self.beta_channel, self.middle_s)
+        self.position = position
+        self.log(f"slider {position}")
+
+    def beta(self):
+        self.move("beta")
+
+    def dark(self):
+        self.move("dark")
+
+    def open(self):
+        self.move("open")
+
+
+class Pumps:
+    """Pumps on channels 3 and 4, one channel per reservoir, e.g. {"water": 3, "h2o2": 4}.
+
+    select() picks the reservoir, on() runs its channel at `value`, off() stops all of them.
+    hooks() is the PUMP dict of the slim notebooks.
+    """
+
+    def __init__(self, client, channels=None, value=1023, log=print):
+        self.client, self.value, self.log = client, value, log
+        self.channels = dict(channels or {"water": 3, "h2o2": 4})
+        self.selected = None
+
+    def select(self, reagent):
+        if reagent not in self.channels:
+            raise KeyError(f"no pump for {reagent!r}: {sorted(self.channels)}")
+        self.selected = reagent
+
+    def on(self):
+        if self.selected is None:
+            raise RuntimeError("select() a reservoir before switching a pump on")
+        self.off()
+        laser_act(self.client, self.channels[self.selected], self.value)
+        self.log(f"pump {self.selected} (channel {self.channels[self.selected]}) on")
+
+    def off(self):
+        for channel in self.channels.values():
+            laser_act(self.client, channel, 0)
+
+    def run(self, reagent, seconds):
+        """Pump `reagent` for `seconds`, e.g. to prime the tubing or to time a flush with dye."""
+        self.select(reagent)
+        self.on()
+        try:
+            time.sleep(seconds)
+        finally:
+            self.off()
+            self.log(f"pump {reagent} off after {seconds:g} s")
+
+    def hooks(self):
+        return {"select": {r: (lambda r=r: self.select(r)) for r in self.channels},
+                "pump_on": self.on, "pump_off": self.off}
+
+
+# --------------------------------------------------------------------------------------------
 # Run folder
 # --------------------------------------------------------------------------------------------
 class Run:

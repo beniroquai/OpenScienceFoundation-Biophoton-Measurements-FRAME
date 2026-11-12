@@ -4,6 +4,7 @@ Each test drives the real acquisition code (ProtocolAcquisition, run folders, en
 with `slim.Simulator` standing in for ImSwitch, the shutter, the pump and the beta light, then
 checks that the analysis recovers what the simulator was told.
 """
+import json
 import tempfile
 import threading
 import time
@@ -174,11 +175,62 @@ def test_operator_in_background():
         print(f"operator confirmed {confirmed} shutter moves in the background")
 
 
+class SerialRecorder:
+    """Stands in for ImSwitch's UC2ConfigController/writeSerial: records (channel, value)."""
+
+    base_uri = "http://test"
+
+    def __init__(self):
+        self.sent = []
+
+    def get_json(self, url, payload=None):
+        assert url.endswith("/UC2ConfigController/writeSerial"), url
+        cmd = json.loads(payload["payload"])
+        assert cmd["task"] == "/laser_act", cmd
+        self.sent.append((cmd["LASERid"], cmd["LASERval"]))
+        return 1
+
+
+def test_slider_and_pumps():
+    """Dark slider on channels 1/2 and pumps on 3/4: the /laser_act sequence ImSwitch sends."""
+    esp = SerialRecorder()
+    slider = slim.bp.DarkSlider(esp, travel_s=0, middle_s=0, log=QUIET)
+    slider.beta()
+    assert esp.sent == [(2, 0), (1, 1023), (1, 0)], esp.sent
+    esp.sent.clear()
+    slider.dark()          # to the open stop, then back towards the beta light for middle_s
+    assert esp.sent == [(1, 0), (2, 1023), (2, 0), (2, 0), (1, 1023), (1, 0)], esp.sent
+    assert slider.position == "dark"
+
+    esp.sent.clear()
+    pumps = slim.bp.Pumps(esp, {"water": 3, "h2o2": 4}, log=QUIET)
+    hooks = pumps.hooks()
+    fluidics = slim.Fluidics("callable", hooks["select"], hooks["pump_on"], hooks["pump_off"],
+                             flush_s=0, settle_s=0, log=QUIET)
+    fluidics.exchange("h2o2")
+    assert esp.sent == [(3, 0), (4, 0), (4, 1023), (3, 0), (4, 0)], esp.sent
+    try:
+        fluidics.exchange("ethanol")
+    except KeyError:
+        pass
+    else:
+        raise AssertionError("unknown reservoir accepted")
+
+    steps = slim.calibration_schedule([10, 20], n_frames=2, beta_on_slider=True)
+    assert not any(s.get("prompt") for s in steps), steps
+    try:
+        slim.calibration_schedule([10], reference_ms=10, beta_on_slider=True)
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("sample-plane reference accepted with the beta light on the slider")
+
+
 if __name__ == "__main__":
     import matplotlib
     matplotlib.use("Agg")
     tests = [test_leaf_schedule, test_calibration, test_leaf_run_interleaved_darks_with_drift,
-             test_controls_and_summary, test_operator_in_background]
+             test_controls_and_summary, test_operator_in_background, test_slider_and_pumps]
     failed = 0
     for t in tests:
         try:

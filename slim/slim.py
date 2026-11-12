@@ -282,12 +282,20 @@ class ProtocolAcquisition(bp.Acquisition):
 # Schedules
 # --------------------------------------------------------------------------------------------
 def calibration_schedule(exposures_ms, n_frames=8, n_bias=20, bias_ms=1, reference_ms=None,
-                         n_reference=8):
+                         n_reference=8, beta_on_slider=False):
     """S1: bias, then the beta light in the infinity space over an exposure ladder (light and
-    dark frames at each exposure), then optionally the beta light at the sample plane."""
-    steps = [{"label": "bias", "shutter": "closed", "exposure_ms": bias_ms, "n_frames": n_bias},
-             {"label": "source", "prompt": "Put the beta light into the INFINITY SPACE (lens in "
-                                            "front of it) and close the enclosure"}]
+    dark frames at each exposure), then optionally the beta light at the sample plane.
+
+    beta_on_slider: the beta light sits on the dark slider (bp.DarkSlider), so "shutter open"
+    puts it into the infinity space and nobody has to place or remove it there. The sample-plane
+    reference is not possible then: its "open" frames would see the slider's beta light too.
+    """
+    if beta_on_slider and reference_ms:
+        raise ValueError("the sample-plane reference needs a shutter without the beta light on it")
+    steps = [{"label": "bias", "shutter": "closed", "exposure_ms": bias_ms, "n_frames": n_bias}]
+    if not beta_on_slider:
+        steps.append({"label": "source", "prompt": "Put the beta light into the INFINITY SPACE "
+                                                    "(lens in front of it) and close the enclosure"})
     for ms in exposures_ms:
         steps += [{"label": "ptc_light", "shutter": "open", "exposure_ms": ms, "n_frames": n_frames},
                   {"label": "ptc_dark", "shutter": "closed", "exposure_ms": ms, "n_frames": n_frames}]
@@ -298,7 +306,8 @@ def calibration_schedule(exposures_ms, n_frames=8, n_bias=20, bias_ms=1, referen
                    "n_frames": n_reference},
                   {"label": "ref_dark", "shutter": "closed", "exposure_ms": reference_ms,
                    "n_frames": n_reference}]
-    steps.append({"label": "source", "prompt": "Remove the beta light"})
+    if not beta_on_slider:
+        steps.append({"label": "source", "prompt": "Remove the beta light"})
     return steps
 
 
